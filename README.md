@@ -1,1 +1,1 @@
-I’m testing my discipline and drive by committing to learn Python in 100 days—building 100 apps, games, and websites using Flask, starting from basics and pushing through to advanced concepts daily.
+I’m challenging my discipline by committing to build 100 different projects in 100 days — a mix of apps, games, and websites using Flask — to master Python from fundamentals to advanced.
