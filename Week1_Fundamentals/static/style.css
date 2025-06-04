@@ -28,6 +28,20 @@ body {
     margin: 0 auto; 
 }
 
+.adv-container{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.calc-container{
+    background: white;
+    width: 100%;
+    margin: 0 auto; 
+}
+
 input, select, button {
     padding: 20px;
     margin: 10px 0; 
@@ -35,6 +49,13 @@ input, select, button {
 }
 
 .game-rules {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.advcalc-desc{
     margin-top: 20px;
     text-align: center;
     font-size: 14px;

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="adv-container">
+    <form method="post">
+        <h1>Advanced Calculator</h1>
+        <div class="calc-container">
+        <p class="advcalc-desc">
+            Why it's Advanced:<br>
+            * This calculator can handle basic arithmetic operations: addition, subtraction, multiplication, and division.<br>
+            * It allows users to input two numbers and select an operation to perform on them.<br>
+            * The result is displayed after the calculation is performed (Continous Calculation).<br>
+            * It also includes basic error handling for division by zero.
+        </p>
+        <input type="number" id="x" name="x" value="{{ x if x is not none else '' }}" placeholder="Enter First Number">
+        <input type="number" id="y" name="y" value="{{ y if y is not none else '' }}" placeholder="Enter Second Number">
+        <select id="operation" name="operation">
+            <option value="+" {% if operation == '+' %}selected{% endif %}>+</option>
+            <option value="-" {% if operation == '-' %}selected{% endif %}>-</option>
+            <option value="*" {% if operation == '*' %}selected{% endif %}>*</option>
+            <option value="/" {% if operation == '/' %}selected{% endif %}>/</option>
+        </select>
+        <input type="submit" value="Calculate">
+        <a href="/" style="text-decoration:none;">
+            <button type="button">Reset</button>
+        </a>
+        </div>
+    </form>
+    <br>
+    {% if result is not none %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+    </div>
+</body>
+</html>

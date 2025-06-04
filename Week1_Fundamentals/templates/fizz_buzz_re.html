@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz-Buzz RE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="fizz-container">
+        <h2>Fizz Buzz Refactored</h2>
+        <h3>Enter a number to see if it's Fizz, Buzz, or FizzBuzz!</h3>
+        <div class="rules-container">
+        <p class="game-rules">
+            Game Rules:<br>
+            * If the random number is divisible by 5, the you dont need to say the number, instead,say "Fizz!".<br>
+            * Also, if the random number contains a 5, the you must say "Fizz!".<br>
+            * if the random number contains a 7 or is divisible by 7, you must say "Buzz!".<br>
+            * These fizzes and buzzes combine together - for example, instead of 35, you should say "Fizz, fizz, buzz!", because the number contains a 5, is divisible by 5, and is divisible by 7.<br>
+        </p>
+        </div>
+        <h4> For the random number ->  <strong>{{ random_num }}</strong></h4>
+        <form method="post">
+            <label for="guess">Say -> </label>
+            <input type="text" id="guess" name="guess" placeholder="e.g. fizzbuzz, fizz, buzz, 23" required>
+            <input type="submit" value="Check">
+        </form>
+        {% if feedback %}
+            <p>{{ feedback }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
